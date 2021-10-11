@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/student_item_textview_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Student name"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/student_item_textview_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Student name"
+        android:textSize="16dp"
+        android:textColor="#4DFFA6"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/student_item_textview_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/student_item_textview_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Student name"
+        android:textSize="16dp"
+        android:textColor="#ff2121"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/student_item_textview_name"
+        app:layout_constraintStart_toEndOf="@id/student_item_textview_age"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
