@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentStudentProfile"
+    android:background="@color/blue"
+    android:id="@+id/fragment_student_profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_student_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/fragment_student_profile_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="age"
+        android:layout_below="@+id/fragment_student_profile_name"
+        android:layout_alignStart="@+id/fragment_student_profile_name"
+        android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/fragment_student_profile_cancel_button"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/fragment_student_profile_age"
+            android:layout_gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/grey"
+            android:textSize="50sp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>
