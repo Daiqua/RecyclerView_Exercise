@@ -21,6 +21,7 @@ public class MyStudentsListAdapter extends RecyclerView.Adapter<MyStudentsListAd
         public TextView mListPosition;
         public TextView mStudentAge;
         public Button mDetailsButton;
+        public int mAdapterPosition;
 
 
 
@@ -33,10 +34,15 @@ public class MyStudentsListAdapter extends RecyclerView.Adapter<MyStudentsListAd
             mDetailsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mAdapterPosition=getAdapterPosition();
-                    Toast.makeText(v.getContext(), "Trop cool"+getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                    FragmentStudentProfile fragmentStudentProfile = new FragmentStudentProfile();
-                    fragmentStudentProfile.newInstance("test");
+
+                    Student student = mMyStudentsList.get(getAdapterPosition());
+
+                    StudentProfileAlertDialog.setStudentProfileName(student.getName());
+                    StudentProfileAlertDialog.setStudentProfileAge(student.getAge());
+                    StudentProfileAlertDialog.setStudentProfileListPosition(getAdapterPosition());
+                    StudentProfileAlertDialog studentProfileAlertDialog = new StudentProfileAlertDialog(view);
+
+
                 }
             });
         }
@@ -68,5 +74,8 @@ public class MyStudentsListAdapter extends RecyclerView.Adapter<MyStudentsListAd
         return mMyStudentsList.size();
     }
 
+    public static int getAdapterPosition() {
+        return mAdapterPosition;
+    }
 }
 
